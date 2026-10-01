@@ -1,12 +1,10 @@
 # Data dictionary
 
-All timestamps are in UTC. Email timestamps are written in ISO format with a `Z` suffix (for example `2023-03-07T13:26:57Z`); the others use `YYYY-MM-DD HH:MM:SS`.
 
----
 
-## Raw files and columns
+## Files and columns
 
-### customers_raw.csv
+### customers.csv
 | Column | Description |
 |---|---|
 | customer_id | Customer key (whole number). |
@@ -20,7 +18,7 @@ All timestamps are in UTC. Email timestamps are written in ISO format with a `Z`
 | email_opt_in | Whether the customer agreed to marketing email. |
 | acquisition_channel | How the customer first found the store. |
 
-### products_raw.csv
+### products.csv
 | Column | Description |
 |---|---|
 | sku | Product code, `SKU-00042`. The number part is the product ID. |
@@ -30,7 +28,7 @@ All timestamps are in UTC. Email timestamps are written in ISO format with a `Z`
 | launch_date | Date the product went on sale. |
 | status | Whether the product is still sold. |
 
-### campaigns_raw.csv
+### campaigns.csv
 An export from the marketing tool. It has **three lines above the header** and a **total line at the bottom**.
 
 | Column | Description |
@@ -44,13 +42,13 @@ An export from the marketing tool. It has **three lines above the header** and a
 | subject_line_a, subject_line_b | Email subject lines. `subject_line_b` is filled only for A/B test sends. |
 | test_id | Links A/B test sends to `ab_tests`. |
 
-### ab_tests_raw.csv
+### ab_tests.csv
 Already tidy: test_id, test_name, hypothesis, primary_metric, variant_a, variant_b, start_date, planned_end_date, status.
 
 ### fx_rates_raw.csv
 One row per month, one column per currency (GBP, EUR, CAD, AUD). Values are **USD per 1 unit** of that currency. USD is not in the file; its rate is always 1.
 
-### email_sends_raw.csv
+### email_sends.csv
 | Column | Description |
 |---|---|
 | send_id | Key for one email sent to one customer. |
@@ -60,7 +58,7 @@ One row per month, one column per currency (GBP, EUR, CAD, AUD). Values are **US
 | sent_at | Send time (UTC, ISO with `Z`). |
 | delivery_status | delivered, hard bounce or soft bounce (written several ways). |
 
-### email_events_raw.csv
+### email_events.csv
 One row per engagement event, in long format. A send can have several opens and clicks.
 
 | Column | Description |
@@ -70,7 +68,7 @@ One row per engagement event, in long format. A send can have several opens and 
 | event_type | open, click, unsubscribe or spam complaint (written several ways). |
 | event_time | Time of the event (UTC, ISO with `Z`). |
 
-### sessions_raw.csv
+### sessions.csv
 | Column | Description |
 |---|---|
 | session_id | Visit key. |
@@ -81,7 +79,7 @@ One row per engagement event, in long format. A send can have several opens and 
 | referrer | Full URL of the site the visitor came from. Blank means none. |
 | session_duration | Length of the visit as `hh:mm:ss`. |
 
-### events_raw.csv
+### events.csv
 | Column | Description |
 |---|---|
 | event_id | Row key. |
@@ -90,7 +88,7 @@ One row per engagement event, in long format. A send can have several opens and 
 | event_name | page_view, product_view, add_to_cart, begin_checkout or purchase (written several ways). |
 | product_ref | Product code for product views and add-to-cart events (written several ways). |
 
-### orders_raw.csv
+### orders.csv
 | Column | Description |
 |---|---|
 | order_number | Order key, `SE-100001`. |
@@ -105,7 +103,7 @@ One row per engagement event, in long format. A send can have several opens and 
 | refund_amount | Amount refunded, same format. Blank means no refund. |
 | refund_date | Date of the refund. |
 
-### order_items_raw.csv
+### order_items.csv
 | Column | Description |
 |---|---|
 | order_number | Links to `orders`. |
