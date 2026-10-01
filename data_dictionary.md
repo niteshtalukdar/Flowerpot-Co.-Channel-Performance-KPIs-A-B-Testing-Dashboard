@@ -1,5 +1,6 @@
 # Data dictionary
 
+This dictionary describes the files used in this project.
 
 
 ## Files and columns
