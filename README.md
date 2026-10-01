@@ -22,5 +22,5 @@ This is synthetic data. It was generated with a seeded Python script to mimic CR
 
 - Period: January 2021 – December 2023
 - 11 tables, about 3.5 million rows in total
-- Source: (https://www.kaggle.com/datasets/geethasagarbonthu/marketing-and-e-commerce-analytics-dataset/data) 
+- Source: [Kaggle – Marketing & E-Commerce Analytics Dataset](https://www.kaggle.com/datasets/geethasagarbonthu/marketing-and-e-commerce-analytics-dataset)
 
