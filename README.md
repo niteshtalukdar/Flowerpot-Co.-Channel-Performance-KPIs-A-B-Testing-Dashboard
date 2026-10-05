@@ -2,25 +2,25 @@
 
 A two-page Power BI dashboard for Flowerpot & Co., a fictional online store selling homeware, clothing, beauty, electronics and outdoor products in five countries. Page 1 tracks how each marketing channel performs month by month. Page 2 reads out three email A/B tests and says whether each result is significant yet.
 
-![Page 1 – Channel KPI Scorecard](Screenshots/page_1_channel_kpi_scorecard.png)
+![Page 1 – Channel KPI Scorecard](Screenshot/page_1_channel_kpi_scorecard.png)
 
 ## What the dashboard shows
 
 - **Page 1 – Channel KPI scorecard:** website KPIs (sessions, conversion rate, revenue per session, net revenue) and email KPIs (sends, open rate, click rate, conversion rate, revenue per send, unsubscribe rate). A month picker shows any month from Jan 2021 to Dec 2023, compared with the month before. A headline sentence updates with the month, a channel table ranks all nine channels, and trend charts show every month.
 - **Page 2 – A/B test readout:** three email tests, each comparing a variant (B) with the control (A). For each test it shows the hypothesis, the size of each group, the lift, a 95% confidence interval, the p-value and a plain verdict: *Significant*, *Not significant* or *Not yet significant*.
 
-![Page 2 – A/B Test Readout (T01)](Screenshots/page_2_ab_test_t01.png)
+![Page 2 – A/B Test Readout (T01)](Screenshot/page_2_ab_test_t01.png)
 
 <details>
 <summary>Page 2 for the other two tests (click to expand)</summary>
 
 **T02 – Lifestyle vs product-grid email layout**
 
-![Page 2 – T02](Screenshots/page_2_ab_test_t02.png)
+![Page 2 – T02](Screenshot/page_2_ab_test_t02.png)
 
 **T03 – Free shipping vs 15% off offer (still running)**
 
-![Page 2 – T03](Screenshots/page_2_ab_test_t03.png)
+![Page 2 – T03](Screenshot/page_2_ab_test_t03.png)
 
 </details>
 
@@ -88,7 +88,7 @@ The views were exported to CSV and loaded into Power BI.
 
 Two fact tables (`sessions` and `email_sends`) share a `Date` table and a `campaigns` table. A/B test details link through `campaigns`. A small separate table (`AB Metric`) gives the results table one row per metric.
 
-![Data model](Screenshots/data_model.png)
+![Data model](Screenshot/data_model.png)
 
 ### Part 4: DAX
 
